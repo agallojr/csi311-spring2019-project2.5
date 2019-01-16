@@ -1,0 +1,66 @@
+----------------------------------------------------------------
+Mon Dec 17 19:37:03 EST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-bebe-a11d-0000076b5e20 
+on database directory C:\Users\agallojr\Data\src\311-sqldemo\csi311-testdb1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 
+Loaded from file:/C:/Users/agallojr/Data/src/311-sqldemo/target/sqldemo-csi311-jar-with-dependencies.jar
+java.vendor=Oracle Corporation
+java.runtime.version=11.0.1+13
+user.dir=C:\Users\agallojr\Data\src\311-sqldemo
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Dec 17 19:37:04 EST 2018:
+Shutting down instance a816c00e-0167-bebe-a11d-0000076b5e20 on database directory C:\Users\agallojr\Data\src\311-sqldemo\csi311-testdb1 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6e5e91e4 
+Mon Dec 17 19:37:04 EST 2018 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Database 'csi311-testdb1' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at csi311.SqlDemo.shutdown(SqlDemo.java:124)
+	at csi311.SqlDemo.run(SqlDemo.java:30)
+	at csi311.SqlDemo.main(SqlDemo.java:140)
+Caused by: ERROR XJ004: Database 'csi311-testdb1' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 19 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'csi311-testdb1' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at csi311.SqlDemo.shutdown(SqlDemo.java:124)
+	at csi311.SqlDemo.run(SqlDemo.java:30)
+	at csi311.SqlDemo.main(SqlDemo.java:140)
+============= end nested exception, level (1) ===========
+Cleanup action completed
