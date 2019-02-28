@@ -1,19 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- The name of the maven group to which this build artifact will belong. -->
 	<groupId>csi311</groupId>
     
+    <!-- The build artifact name and version.  Use whatever versioning scheme you like... -->
 	<artifactId>sqldemo</artifactId>
 	<version>csi311</version>
     
+    <!-- Our artifact is a jar. -->
 	<packaging>jar</packaging>
 
+	<!-- Use UTF-8 encoding of characters in case we have special ones (e.g. international) -->
+	<!-- Use Java 1.8 build standards. -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	    <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
+	<!-- Our dependencies on external 3rd party libraries.  Maven will fetch these for us. -->
 	<dependencies>
 		<dependency>
 		    <groupId>org.apache.derby</groupId>
@@ -22,6 +29,8 @@
 		</dependency>
 	</dependencies>
     
+    <!-- Instructions for maven to build our jar. We want an executable jar with all the 
+    	 dependent 3rd party jars build into our single deployable executable jar. -->
     <build>
     	<plugins>
       		<plugin>
@@ -40,6 +49,7 @@
           			</descriptorRefs>
 		        	<archive>
 	    				<manifest>
+	    					<!-- The class we will implement which "java -jar" on our jar should invoke. -->
 							<mainClass>csi311.SqlDemo</mainClass>
 	    				</manifest>
 	  				</archive>
